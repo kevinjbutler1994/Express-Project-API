@@ -1,5 +1,5 @@
 import db from '../db/connection.js';
-import Character from '../models/Character.js';
+import Character from '../models/Character.js'
 import Planet from '../models/Planet.js';
 import charactersData from './characters.json' assert {type: 'json'};
 import planetsData from './planets.json' assert {type: 'json'};

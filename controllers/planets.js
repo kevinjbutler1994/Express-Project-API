@@ -1,4 +1,4 @@
-import Planet from "../models/House.js";
+import Planet from "../models/Planet.js";
 
 export const getPlanets = async (req, res) => {
   try {
@@ -13,9 +13,9 @@ export const getPlanets = async (req, res) => {
 export const getPlanet = async (req, res) => {
     try {
       const { id } = req.params;
-      const house = await Planet.findById(id)
+      const planet = await Planet.findById(id)
   
-      if (house) {
+      if (planet) {
         return res.json(planet);
       }
   
@@ -27,9 +27,9 @@ export const getPlanet = async (req, res) => {
   };
   
   export const createPlanet = async (req, res) => {
-    const house = new Planet(req.body);
+    const planet = new Planet(req.body);
     await planet.save();
-    res.status(201).json(house);
+    res.status(201).json(planet);
   };
   
 
@@ -37,14 +37,14 @@ export const getPlanet = async (req, res) => {
             try {
               const { id } = req.params;
               const house = await Planet.findByIdAndUpdate(id, req.body);
-              res.status(201).json(house);
+              res.status(201).json(planet);
             } catch (error) {
               console.error(error);
               res.status(500).json({ error: error.message });
             }
           };
           
-          export const deleteHouse = async (req, res) => {
+          export const deletePlanet = async (req, res) => {
             try {
               const { id } = req.params;
               const deleted = await Planet.findByIdAndDelete(id);
