@@ -7,7 +7,7 @@ import chalk from 'chalk';
 
 const app = express() 
 
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(cors())
@@ -22,6 +22,6 @@ db.on('connected', ()=>{
 });
 
 
-app.listen(port, ()=> {
-    console.log(chalk.magenta(`Express server running on port ${port}`));
+app.listen(PORT, ()=> {
+    console.log(chalk.magenta(`Express server running on port ${PORT}`));
 });

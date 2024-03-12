@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import chalk from 'chalk';
+connectionString = process.env.DB_URL || 'mongodb://localhost/bookmarks'
 
 mongoose.set("returnOriginal", false);
 

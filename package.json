@@ -5,6 +5,7 @@
   "main": "server.js",
   "directories": {
     "lib": "lib"
+
   },
   "scripts": {
     "start": "node server.js",
